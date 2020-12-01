@@ -1,10 +1,15 @@
 //here queryselctor assigns the entire html event to the variable
 
+var inputText = document.querySelector("#input-text");
+
 //joke button click processing 
 var jokeBtn = document.querySelector("#joke-btn");
 
+//joke output process
+var jokeText = document.querySelector("#joke-text");
+
 //output process
-var outputText1 = document.querySelector("#output-text1");
+var outputText = document.querySelector("#output-text");
 
 
 //test server URL
@@ -16,21 +21,26 @@ var url = "https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw,sex
 
 
 function errorHandler(error) {
-    console.log("Error Occurred"); //useful to print on console to debug
+    console.log("Error Occurred"); //useful if we print on console to debug
     alert("Oops! Error Occurred. Please try after sometime");
 }
 
 
+
 function jokeHandler() {
 
-       fetch(url) //since here we are not providing any values to the key, direct url is enough
+    var userName = inputText.value;
+    console.log(inputText);
+    outputText.innerText = userName + " Here is your joke 👇";
+
+    fetch(url) //since here we are not providing any values to the key, direct url is enough
 
         .then(response => response.json())
         //Also => .then(function responseHandler(response) { return reponse.json() ))
 
         .then(json => {
-            var jokeText = json.joke; //storing the value of joke key
-            outputText1.innerText = jokeText;
+            var joke = json.joke; //storing the value of joke key
+            jokeText.innerText = joke;
             console.log(json.joke);
         })
 
@@ -38,9 +48,14 @@ function jokeHandler() {
 
         //error handling function
         .catch(errorHandler); //call back function if we encounter error on server
+     
 }
 
 
 
+
+
+
+
 //EventListener needs an event like click,scroll... and a function to perform on it 
-jokeBtn.addEventListener("click", jokeHandler);
+jokeBtn.addEventListener("click", jokeHandler)

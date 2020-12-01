@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
 
 :root{
-    --primary: #F2C94C;
+    --primary: #8105d8;
 }
 
 
@@ -12,46 +12,52 @@ body{
     font-size: large;
     margin: auto;
     text-align: center;
-    
+    color:#8105d8;
 }
 
+
 .header-style{
-    max-width: none;
-    background-color: var(--primary);
+    background-color: whitesmoke;
     border-style: inset;
     text-align: center;
     border-bottom-right-radius: 2rem;
 }
 .header-style h1{
     letter-spacing: 0.2rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
     margin-top: 0.2rem;
     font-weight: bolder;
     font-size: 40px;
     
 }
-img{
-    display: block;
-    margin: auto;
-    width: 350px;
-    height: auto;
-    padding: 1rem;
-}
+
 .main-style{
     display: block;
-    max-width: 500px; 
-    margin: auto;
-    /* width: 70%; */
-}
-textarea {
     width: 80%;
-    margin: 1rem;
-    height: 10vh;
-    padding: 1rem 1rem;
-    border-radius: 1rem;
+    max-width: 900px;
+    height: auto; 
+    margin: auto;
+    background-image: url("laugh.png");
+    background-size: 130px;
+    background-position: center;
+}
+
+.main-style h2,h3, h4{
+    margin-left: auto;
+    margin-right: auto;    
+    background-color: white;
+    max-width: max-content;
+    min-height: max-content;
+}
+
+
+textarea {
+    max-width: 200px;
+    max-height: 3vh;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
     border: 1px solid black;
-    /* box-sizing: border-box; */
-    font-size: larger;
+    font-size: large;
 
 }
 
@@ -60,32 +66,50 @@ textarea {
     background-color: var(--primary);
     display: block;
     margin: auto;
-    color: black;
+    color: white;
     font-weight: bold;
     text-align: center;
     border: var(--primary);
-    font-size: large;
+    font-size: medium;
     border-radius: 0.5rem;
     padding: 0.5rem;
 
 }
 
-#output-text1{
-    width: 80%;
+#joke-text{
+    widows: 50%;
+    max-width: 300px;
     margin: auto;
-    min-height: 10vh;
+    min-height: max-content;
     height: auto;
     padding: 1rem 1rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     border: 1px solid black;
     text-align: left;
+    font-size: larger;
+    background-color: white;
+}
+
+
+#output-text{
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    max-width: max-content;
+    height: 4vh;
+    background-color: white;
+}
+
+#output-text h3{
+    text-align: center;
     font-size: larger;
 }
 
 
+
 .footer-style{
     max-width: none;
-    background-color: var(--primary);
+    background-color: whitesmoke;
     border-style: outset;
     text-align: center;
     border-top-left-radius: 2rem;
@@ -95,4 +119,5 @@ textarea {
 
 .footer-style a{
     text-decoration: none;
+    color: red;
 }
