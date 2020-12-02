@@ -52,6 +52,7 @@ body{
 
 
 textarea {
+    width: auto;
     max-width: 300px;
     max-height: 3vh;
     padding: 0.5rem 1rem;
@@ -76,8 +77,24 @@ textarea {
 
 }
 
+#output-text{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: max-content;
+    height: auto;
+    background-color: white;
+}
+
+#output-text h3{
+    text-align: center;
+    font-size: larger;
+}
+
 #joke-text{
-    widows: 50%;
+    display: block;
+    width: 70%;
     max-width: 300px;
     margin: auto;
     min-height: max-content;
@@ -88,21 +105,6 @@ textarea {
     text-align: left;
     font-size: larger;
     background-color: white;
-}
-
-
-#output-text{
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    max-width: max-content;
-    height: 4vh;
-    background-color: white;
-}
-
-#output-text h3{
-    text-align: center;
-    font-size: larger;
 }
 
 
